@@ -1,0 +1,24 @@
+// option1.rs
+// Make me compile! Execute `rustlings hint option1` for hints
+
+// you can modify anything EXCEPT for this function's sig
+fn print_number(maybe_number: Option<u16>) {
+    match maybe_number {
+        Some(n) => println!("printing: {}", n),
+        None => {}
+    }
+}
+
+fn main() {
+    print_number(Some(13u16));
+    print_number(Some(99u16));
+
+    let mut numbers: [u16; 5] = [0, 0, 0, 0, 0];
+    for iter in 0..5 {
+        let number_to_add: u16 = {
+            ((iter * 5) + 2) / (4 * 16)
+        };
+
+        numbers[iter as usize] = number_to_add;
+    }
+}
